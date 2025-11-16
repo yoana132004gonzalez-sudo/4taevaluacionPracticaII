@@ -1,42 +1,55 @@
-import '../styles/components/pages/contactoPage.css';
-const contactoPages = (Props) => {
-    return (
-        <main className='holder contacto'>
-            <div>
-                <h2>Contacto</h2>
-                <form className='formulario' action='' method='' >
-                    <p>
-                        <label for='nombre'>Nombre</label>
-                        <input type='text'/>
-                    </p>
-                    <p>
-                        <label for='email'>Email</label>
-                        <input type='text' />
-                    </p>
-                    <p>
-                        <label for='telefono'>Telefono</label>
-                        <input type='text' />
-                    </p>
-                    <p>
-                        <label for='mensaje'>Mensaje</label>
-                        <textarea></textarea>
-                    </p>
-                     <p className='acciones'><input type='submit' value='Enviar'/> </p>
-                   
-                </form>
+import "../styles/components/pages/ContactoPage.css";
+import { FaFacebook, FaInstagram, FaWhatsapp } from "react-icons/fa";
 
-            </div>
-             <div className='datos'>
-                <h2>Otras vias de comunicación</h2>
-                <p>También puede contactarse con nosotros usando el siguientes medios</p>
-                <ul>
-                    <li>Teléfono: 43242388</li>
-                    <li>Email: contacto@corazonespeludos.com.ar</li>
-                    <li>Facebook: Corazones Peludos</li>
-                </ul>
-             </div>
-        </main>
-    );
+function ContactoPage() {
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    alert("Mensaje enviado correctamente");
+  };
+
+  return (
+    <div className="contacto">
+      <h2>Contacto</h2>
+      <p>Si tenés alguna consulta o querés más información, completá el formulario:</p>
+
+      <form onSubmit={handleSubmit} className="form-contacto">
+        <label>Nombre:</label>
+        <input type="text" name="nombre" required />
+
+        <label>Email:</label>
+        <input type="email" name="email" required />
+
+        <label>Teléfono:</label>
+        <input type="tel" name="telefono" />
+
+        <label>Mensaje:</label>
+        <textarea name="mensaje" rows="4" required></textarea>
+
+        <button type="submit" className="btn-enviar">Enviar</button>
+      </form>
+
+      <div className="info-contacto">
+        <h3>Información de contacto</h3>
+        <p><strong>Teléfono:</strong> +54 9 3772 12-3456</p>
+        <p><strong>Email:</strong> corazonespeludos@gmail.com</p>
+        <p><strong>Redes sociales:</strong></p>
+        
+        <div className="social-icons">
+          <a href="https://facebook.com/corazonespeludos" target="_blank" rel="noopener noreferrer">
+            <FaFacebook size={40} color="#1877F2" />
+          </a>
+
+          <a href="https://instagram.com/corazonespeludos" target="_blank" rel="noopener noreferrer">
+            <FaInstagram size={40} color="#E4405F" />
+          </a>
+  
+          <a href="https://wa.me/543791234567" target="_blank" rel="noopener noreferrer">
+            <FaWhatsapp size={40} color="#25D366" />
+          </a>
+        </div>
+      </div>
+    </div>
+  );
 }
-export default contactoPages;
 
+export default ContactoPage;

@@ -1,13 +1,15 @@
-import '../../styles/components/layout/Header.css';
+import '../../styles/components/layout/Header.css'
 
-const Header = (props) => {
+const Header = () => {
     return (
         <header>
-            <div className='holder'>
-                <img src="img/logo.jpg" width="150px" style={{ borderRadius: "50%", height:"150px" }} alt="Corazones Peludos" />
-                <h1>Corazones Peludos</h1>
+            <div className="holder">
+                 <img src="/img/logo.jpg" alt="Mascotas en Adopción" className="img-header"/>
+                 <h1 className="title">Corazones peludos <span className="paw">🐾</span></h1>
             </div>
         </header>
-    );
+    )
 }
+
 export default Header;
+

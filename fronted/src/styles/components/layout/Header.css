@@ -1,16 +1,33 @@
-header{
+header {
     background-color: #2e7d32;
     padding: 16px 0;
-    
+    box-shadow: 0 0 10px black inset;
+    color: white;
+}
+t
+.holder {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
 }
 
-header h1{
-    color: white;
-    font-size: 40px;
-    font-weight: 300;
-    font-style: italic;
-    display: inline-block;
-    position: relative;
-    bottom: 35px;
-    margin-left: 10px;
+.img-header {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 3px solid #fff;
+}
+
+.title {
+    font-size: 2rem;
+    font-weight: bold;
+    margin: 0;
+}
+
+.paw {
+    font-size: 1.5rem;
+    margin-left: 8px;
 }

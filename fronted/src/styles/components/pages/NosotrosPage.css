@@ -1,28 +1,79 @@
-.historia p{
-    font-size: 12px;
+.holder {
+  display: flex;
+  flex-direction: column; 
+  align-items: center;  
+}
+
+.historia {
+  width: 100%;
+  max-width: 900px;
+  margin-bottom: 0px;    
+  text-align: center;
+}
+
+.historia h2 {
+  color: #2e7d32;
+  margin-bottom: 16px;
+  font-size: 1.6rem;
+}
+
+.historia p {
+  font-size: 16px;
+  line-height: 1.6;
+  margin-bottom: 10px;
+  color: #333;
+}
+
+/* Staff debajo */
+.staff {
+  width: 100%;
+  max-width: 900px;
+  text-align: center;
+}
+
+.staff h2 {
+  color: #2e7d32;
+  margin-bottom: 30px;
+  font-size: 1.6rem;
 }
 
 .personas {
-    display: flex;
-    justify-content: center;
-    gap: 10px;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
 }
 
 .persona {
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    width: 18%;
-    text-align: center;
-    padding: 13px;
-    box-sizing: border-box;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  width: 250px;
+  text-align: center;
+  padding: 15px;
+  box-sizing: border-box;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  background-color: #fafafa;
 }
 
-.persona img{
-    border-radius: 50%;
-    max-width: 60%;
-    box-shadow: 0 0 5px rgba(0,0,0,0.5);
+.persona img {
+  border-radius: 50%;
+  width: 120px;
+  height: 120px;
+  object-fit: cover;
+  margin-bottom: 10px;
+  box-shadow: 0 0 5px rgba(0,0,0,0.5);
 }
-.persona p {
-    color: #666;
-    font-size: 10px;
+
+.persona h5 {
+  margin: 5px 0;          
+  font-size: 1.4rem;      
+  font-weight: bold;
+  color: #1f291f;
+}
+
+.persona h6 {
+  margin: 2px 0 8px 0;
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #000;
 }
